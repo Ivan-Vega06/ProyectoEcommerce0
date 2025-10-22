@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Lasaña",
+    "price": 22000,
+    "category": "pastas",
+    "description": "Lasaña perfecta para una cena en familia.",
+    "imageUrl": "/images/lasana.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Pizza Margarita",
+    "price": 15000,
+    "category": "pizzas",
+    "description": "Pizza simple y clasica.",
+    "imageUrl": "/images/pizza.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Spaghetti Agilo",
+    "category": "pastas",
+    "price": 10600,
+    "description": "Plato tradicional nacido en Napoles.",
+    "imageUrl": "/images/spaghetti.jpg"
+  }
+]

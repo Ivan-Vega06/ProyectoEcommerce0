@@ -1,0 +1,68 @@
+.product-item {
+  background-color: #1e1e1e; /* Gris más claro que el fondo */
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 100%; /* Cambiado para que ocupe el ancho disponible */
+  color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.product-item img {
+  width: 150px; /* Ancho fijo para la imagen */
+  height: 150px;
+  object-fit: cover; /* Mantiene proporción y recorta si es necesario */
+  border-radius: 0.25rem;
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.product-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.product-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.product-item p {
+  margin: 0.375rem 0; /* 6px */
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffcc66;
+}
+
+.product-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: auto; /* Empuja los botones hacia la derecha */
+}
+
+.product-actions .btn,
+.product-actions .btn-add {
+  margin: 0;
+}
+
+/* Contenedor de información del producto */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
