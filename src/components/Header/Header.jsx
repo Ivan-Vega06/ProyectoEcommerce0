@@ -1,4 +1,4 @@
-import { Nav } from "../nav/Nav.jsx";
+import { Nav } from "@components/nav/Nav.jsx";
 
 
 export const Header = () => {
