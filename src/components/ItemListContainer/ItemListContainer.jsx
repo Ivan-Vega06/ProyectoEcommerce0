@@ -1,24 +1,28 @@
 import { useEffect, useState } from "react";
-import { ItemList } from "@components/itemList/itemList.jsx";
+import { ItemList } from "../ItemList/ItemList/jsx";
+import { getProducts } from "../../components/services/product";
 
 export const ItemListContainer = ({ titulo }) => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/data/products.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Hubo un problema al buscar productos");
-        }
-        return res.json();
-      })
+    getProducts()
       .then((data) => {
         setProducts(data);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
+        setError("Error al cargar productos");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, []);
+
+  if (loading) return <p>Cargando productos...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <section>

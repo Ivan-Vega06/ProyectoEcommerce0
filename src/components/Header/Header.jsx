@@ -1,11 +1,11 @@
-import { Nav } from "@components/nav/Nav.jsx";
-
+import { Link } from "react-router-dom";
+import { Nav } from "../Nav/Nav";
 
 export const Header = () => {
-    return (
-        <header>
-            <h1>Tienda De Prueba</h1>
-            <Nav />
-        </header>
-    );
+  return (
+    <header>
+      <Link to={"/"}>Tienda</Link>
+      <Nav />
+    </header>
+  );
 };
