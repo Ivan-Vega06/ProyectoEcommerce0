@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ItemList } from "../ItemList/ItemList/jsx";
+import { ItemList } from "../ItemList/ItemList.Jsx";
 import { getProducts } from "../../components/services/product";
 
 export const ItemListContainer = ({ titulo }) => {
